@@ -1,0 +1,20 @@
+name: md
+
+mgmt:
+  network: md
+  ipv4-subnet: 10.7.77.0/24
+
+topology:
+  nodes:
+    mdcli:
+      kind: nokia_sros
+      image: vrnetlab/vr-sros:24.7.R1
+      license: /opt/licenses/license-sros24.txt
+    classic:
+      kind: nokia_sros
+      image: vrnetlab/vr-sros:24.7.R1
+      license: /opt/licenses/license-sros24.txt
+      startup-config: classic.partial.cli
+
+  links:
+    - endpoints: ["mdcli:eth1", "classic:eth1"]

@@ -1,0 +1,2 @@
+/configure system management-interface configuration-mode classic
+/configure system management-interface cli classic-cli
